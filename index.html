@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Franz Nicole Valles</title>
-    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
 
 </head>
 
 <body>
     <nav class="navbar">
+        <div class="logocontainer">
+            <img src="logo.png" class="logo" alt="">
+        </div>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Me</a></li>
@@ -23,7 +25,7 @@
     <section id="home">
         <div class="main">
             <h1 class="headings">FRANZ<br>NICOLE<br>VALLES</h1>
-            <a href="https://cal.com/sechi">
+            <a href="https://tite.fvmg.live/appointment">
                 <button class="btn">
                     Schedule an Appointment
                 </button>
@@ -54,28 +56,39 @@
     <section id="portfolio">
         <h1 class="section-headings">PORTFOLIO</h1>
         <div class="gallery">
-            <img src="PortfolioGallery/1.jpg" alt="">
-            <img src="PortfolioGallery/2.png" alt="">
-            <img src="PortfolioGallery/3.png" alt="">
-            <img src="PortfolioGallery/4.png" alt="">
-            <img src="PortfolioGallery/5.jpg" alt="">
-            <img src="PortfolioGallery/6.jpeg" alt="">
+            <img src="PortfolioGallery/1.jpg" title="Esports Broadcasting" alt="">
+            <img src="PortfolioGallery/2.png" title="Website Development & Design" alt="">
+            <img src="PortfolioGallery/3.png" title="Blogging" alt="">
+            <img src="PortfolioGallery/4.png" title="Storefront" alt="">
+            <img src="PortfolioGallery/5.jpg" title="Graphics Design" alt="">
+            <img src="PortfolioGallery/6.jpeg" title="Photojournalism" alt="">
         </div>
     </section>
 
     <section id="contact">
         <h1 class="section-headings">CONTACT ME</h1>
-        <form action="https://send.pageclip.co/h8r0qhrypYiIt6ScpDuI8PIBZC7Aa3Ww/portfolio-contactform" class="form" method="post">
-            <input type="text" name="name" class="input" placeholder="Name">
-            <input type="email" name="email" class="input" placeholder="Email">
-            <textarea name="message" id="message" cols="30" rows="10" placeholder="Message or inquiry"></textarea>
-            <input type="submit" value="Submit Information" id="send" class="pageclip-form__submit">
+        <div class="deets">
+            <p class="details">Phone: 09193351375 <br>Email: valles@franzvallesmedia.me</p>
+            <div class="formi">
+                <form action="" class="form">
+                    <input type="text" name="name" class="input" placeholder="Name">
+                    <input type="email" name="email" class="input" placeholder="Email">
+                    <textarea name="message" id="message" cols="30" rows="10"
+                        placeholder="Message or inquiry"></textarea>
+                    <input type="submit" value="Submit Information" id="send">
 
-        </form>
+                </form>
+            </div>
+        </div>
     </section>
-    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 </body>
 <style>
+
+    @font-face {
+        font-family: GintoNord;
+        src: url(Ginto\ Nord\ Variable/ABCGintoNordVariable.woff);
+    }
+
     * {
         margin: 0;
         padding: 0;
@@ -89,21 +102,36 @@
     /* Navbar */
     .navbar {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-between;
+        align-items: right;
+        ;
         background-color: rgba(0, 0, 0, 0.5);
         position: sticky;
         top: 0;
+    }
+
+    div.logocontainer {
+        display: flex;
+        justify-content: left;
+        margin-left: 50px;
+    }
+    img.logo {
+        width: auto;
+        height: 35px;
+        margin-top: 10px;
+
     }
 
     .navbar ul {
         display: flex;
         list-style: none;
         margin: 20px 0px;
+        margin-right: 50px;
     }
 
     .navbar ul li {
-        font-family: monospace;
+        font-family: "GintoNord";
+        font-variation-settings: "wght" 375;
         font-size: 1.1rem;
         font-weight: bold;
     }
@@ -156,13 +184,13 @@
     }
 
     .headings {
-        font-family: monospace;
+        font-family: "GintoNord";
         font-size: 3rem;
         margin: 40px 0px;
     }
 
     h1.section-headings {
-        font-family: monospace;
+        font-family: "GintoNord";
         font-size: 3rem;
         margin: 40px 0px;
         text-align: center;
@@ -191,7 +219,9 @@
         flex-direction: column;
         box-sizing: border-box;
         padding: 50px;
-        margin-bottom: 50px;
+        margin-bottom: 0px;
+        background-color: #222;
+        color: #fff;
     }
 
     #pic {
@@ -213,7 +243,8 @@
     }
 
     #intro h2 {
-        font-family: monospace;
+        font-family: "GintoNord";
+        font-variation-settings: "wght" 465;
         font-size: 2rem;
         margin-bottom: 20px;
     }
@@ -226,8 +257,8 @@
     #portfolio {
         display: flex;
         flex-direction: column;
-        background-color: rgba(206, 121, 107, 0.9);
-        color: #222;
+        background-color: #444;
+        color: #eee;
         align-items: center;
         padding: 20px;
 
@@ -257,13 +288,37 @@
         padding: 20px;
     }
 
+    #contact p {
+        font-size: 1.35rem;
+    }
+
+    .deets {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        font-family: monospace;
+        text-align: center;
+    }
+
+    .formi {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+
+    }
+
     .form {
         display: flex;
         flex-direction: column;
         box-sizing: border-box;
         align-items: center;
         margin: 20px 0px;
+    }
 
+    #contact::after {
+        content: "";
+        display: table;
+        clear: both;
     }
 
     .input {
