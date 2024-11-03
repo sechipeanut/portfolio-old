@@ -1,5 +1,6 @@
 # Portfolio
 This houses my portfolio website, created as my Midterm exam project on Web Technologies course.
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/fa43616a-ebe0-4416-900a-c0e39a09e238/deploy-status)](https://app.netlify.com/sites/fvportfolio/deploys)
 
 ### Quick Links
