@@ -1,3 +1,5 @@
+# NOTE: This is the old portfolio. For an updated version, see sechipeanut/portfolio.
+
 # Portfolio
 This houses my portfolio website, created as my Midterm exam project on Web Technologies course.
 
